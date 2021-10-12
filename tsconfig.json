@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "target": "es5",
+        "types": [
+            "node",
+            "screeps"
+        ]
+    },
+        "include": [
+        "./src/**/*"
+    ]
+}

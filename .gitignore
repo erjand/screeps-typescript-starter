@@ -1,3 +1,12 @@
+# VS Code
 *.code-workspace
+
+# Node
 /node_modules
+
+# Screeps authentication information
 /.screeps.json
+
+# TypeScript
+/dist
+/.tscache

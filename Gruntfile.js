@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
     const config = require('./.screeps.json')
+    
     grunt.initConfig({
       screeps: {
         options: {
@@ -9,10 +10,19 @@ module.exports = function(grunt) {
           ptr: config.ptr
         },
         dist: {
-          src: ['src/*.js']
+          src: ['dist/*.js']
+        }
+      },
+      ts: {
+        default: {
+          tsconfig: './tsconfig.json'
         }
       }
     });
   
     grunt.loadNpmTasks('grunt-screeps');
+    grunt.loadNpmTasks('grunt-ts')
+
+    grunt.registerTask("run", ["ts"]);
+    grunt.registerTask("upload", ["default", "screeps"]);
   }
