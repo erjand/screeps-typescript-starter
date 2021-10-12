@@ -2,6 +2,12 @@ module.exports = function(grunt) {
     const config = require('./.screeps.json')
     
     grunt.initConfig({
+      eslint: {
+        options: {
+          configFile: '.eslintrc.yaml',
+        },
+        target: ['src/*.ts', 'src/*.js']
+      },
       screeps: {
         options: {
           email: config.email,
@@ -20,9 +26,10 @@ module.exports = function(grunt) {
       }
     });
   
+    grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-screeps');
-    grunt.loadNpmTasks('grunt-ts')
+    grunt.loadNpmTasks('grunt-ts');
 
-    grunt.registerTask("run", ["ts"]);
+    grunt.registerTask("run", ["eslint", "ts"]);
     grunt.registerTask("upload", ["default", "screeps"]);
   }

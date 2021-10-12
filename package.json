@@ -2,8 +2,12 @@
     "devDependencies": {
         "@types/node": "^14.17.17",
         "@types/screeps": "^3.2.4",
+        "eslint": "^7.32.0",
+        "eslint-config-google": "^0.14.0",
+        "eslint-plugin-screeps": "^2.1.0",
         "grunt": "^1.4.1",
         "grunt-cli": "^1.4.3",
+        "grunt-eslint": "^23.0.0",
         "grunt-screeps": "^1.5.0",
         "grunt-ts": "^6.0.0-beta.22",
         "ts-loader": "^8.3.0",
