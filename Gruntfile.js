@@ -30,6 +30,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-screeps');
     grunt.loadNpmTasks('grunt-ts');
 
-    grunt.registerTask("run", ["eslint", "ts"]);
-    grunt.registerTask("upload", ["default", "screeps"]);
+    grunt.registerTask("build", ["eslint", "ts"]);
+    grunt.registerTask("up", ["build", "screeps"]);
   }
