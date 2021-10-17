@@ -51,6 +51,8 @@ This project is linted using [`eslint`](https://eslint.org/), with the following
 * [`eslint-plugin-screeps`](https://github.com/RiftLurker/eslint-plugin-screeps)
 * [`eslint-plugin-tsdoc`](https://www.npmjs.com/package/eslint-plugin-tsdoc)
 
+Linting rules can be adjusted in the `.eslintrc.yaml` file.
+
 Linting is run as part of both `grunt run` and `grunt up`.
 
 ## Resources
