@@ -2,7 +2,7 @@
 
 ## Summary
 
-[Screeps](https://screeps.com) is an open-source "MMO sandbox game for programmers". 
+[Screeps](https://screeps.com) is an open-source "MMO sandbox game for programmers".
 
 The core mechanic involves programming your units' AI and competing against other players for scarce resources.
 
@@ -35,7 +35,7 @@ To lint and compile:
 grunt build
 ```
 
-To lint, compile, and commit code to specified screeps account:
+To lint, compile, and commit code to the specified screeps account:
 
 ```text
 grunt up
@@ -45,15 +45,9 @@ Once committed, screeps will begin running the new code.
 
 ## Linting
 
-This project is linted using [`eslint`](https://eslint.org/), with the following plugins:
-
-* [`eslint-config-google`](https://github.com/google/eslint-config-google)
-* [`eslint-plugin-screeps`](https://github.com/RiftLurker/eslint-plugin-screeps)
-* [`eslint-plugin-tsdoc`](https://www.npmjs.com/package/eslint-plugin-tsdoc)
+This project is linted using [`eslint`](https://eslint.org/) with the [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint) plugin.
 
 Linting rules can be adjusted in the `.eslintrc.yaml` file.
-
-Linting is run as part of both `grunt run` and `grunt up`.
 
 ## Resources
 

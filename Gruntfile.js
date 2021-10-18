@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         options: {
           configFile: '.eslintrc.yaml',
         },
-        target: ['src/*.ts', 'src/*.js']
+        target: ['src/**/*.ts']
       },
       screeps: {
         options: {

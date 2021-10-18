@@ -1,16 +1,16 @@
 export const loop = () => {
     logGameTick();
     cleanCreepMemory();
-    spawnCreep();
     
-    const myCreep = Game.creeps['Harvester1'];
-    roleUpgrader.run(myCreep);
+    if (Object.keys(Game.creeps).length < 1) {
+        spawnCreep('Worker1');
+    }
 };
 
 /**
  * Write game ticks to stdout.
  */
-function logGameTick() {
+function logGameTick(): void {
     console.log('Current game tick: ${Game.time}');
 }
 
@@ -26,8 +26,10 @@ function cleanCreepMemory() {
 }
 
 /**
- * Spawn a starting creep.
+ * Spawn a starting creep. 
  */
-function spawnCreep() {
-    Game.spawns['Spawn1'].spawnCreep([WORK, WORK, CARRY, MOVE], 'Harvester1');
+function spawnCreep(creepName: string) {
+    Game.spawns['Spawn1'].spawnCreep([WORK, WORK, CARRY, MOVE], creepName);
+    const newCreep = Game.creeps[creepName];
+    roleUpgrader.run(newCreep);
 }
