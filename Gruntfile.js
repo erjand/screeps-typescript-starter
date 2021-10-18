@@ -31,5 +31,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ts');
 
     grunt.registerTask("build", ["eslint", "ts"]);
-    grunt.registerTask("up", ["build", "screeps"]);
+    grunt.registerTask("deploy", ["build", "screeps"]);
   }

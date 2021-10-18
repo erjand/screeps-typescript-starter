@@ -38,7 +38,7 @@ grunt build
 To lint, compile, and commit code to the specified screeps account:
 
 ```text
-grunt up
+grunt deploy
 ```
 
 Once committed, screeps will begin running the new code.
