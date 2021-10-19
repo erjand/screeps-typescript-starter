@@ -2,6 +2,7 @@
     "compilerOptions": {
         "allowJs": true,
         "moduleResolution": "node",
+        "noEmitOnError": true,
         "outDir": "./dist",
         "rootDir": "./src",
         "target": "es5",
