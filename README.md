@@ -1,24 +1,24 @@
-# screeps
+# screeps-typescript-starter
 
-## Summary
+## About Screeps
 
-[Screeps](https://screeps.com) is an open-source "MMO sandbox game for programmers".
+[Screeps](https://screeps.com) is an open-source "MMO sandbox game for programmers". The core mechanic involves programming your units' AI and competing against other players for scarce resources.
 
-The core mechanic involves programming your units' AI and competing against other players for scarce resources.
+The running game can be viewed from a web browser or inside the stand-alone Steam client. The game client supports coding directly, but this can be a challenging environment in which to code and maintain more than a few simple scripts.
 
-Written in [TypeScript](https://www.typescriptlang.org/), using [Grunt](https://gruntjs.com/) and [ESLint](https://eslint.org/).
+## Project Summary
+
+The `screeps-typescript-starter` repository provides everything you need to quickly get a Screeps project off the ground in Typescript.
+
+This starter template is setup for [TypeScript](https://www.typescriptlang.org/) (but will also work well with JavaScript files), and uses [Grunt](https://gruntjs.com/) and [ESLint](https://eslint.org/) to lint and build. The built code is deployed to the specified Screeps account using the [grunt-screeps](https://github.com/screeps/grunt-screeps) plugin.
 
 ## Usage
 
-To get started:
+### Initial Setup
 
-```text
-npm install
-```
-
-This project leverages the [grunt-screeps](https://github.com/screeps/grunt-screeps) plugin for committing code to a specified screeps account.
-
-Create a `.screeps.json` file in the project root directory and provide the screeps account credentials:
+1. [Create](https://screeps.com/a/#!/register) a Screeps account.
+2. Clone a copy of this repository and run `npm install` in the project root directory.
+3. Create a `.screeps.json` file in the project root directory and provide your screeps account credentials.
 
 ```text
 {
@@ -29,27 +29,37 @@ Create a `.screeps.json` file in the project root directory and provide the scre
 }
 ```
 
-To lint and compile:
+### Add Creep AI
+
+The `main.ts` `loop` method is ready to begin adding your own Creep AI. Two starter methods are included to write game ticks to the console log, and to clean up dead Creeps from memory.
+
+### Build
+
+The `build` command will lint and compile all `src/**/*.ts` files.
 
 ```text
 grunt build
 ```
 
-To lint, compile, and commit code to the specified screeps account:
+### Deploy
+
+The `deploy` command will lint, compile, and deploy all built `dist/*.js` files to the specified screeps account.
 
 ```text
 grunt deploy
 ```
 
-Once committed, screeps will begin running the new code.
+Once committed, the targeted screeps account will begin running the new code right away.
 
-## Linting
+## Linting Rules
 
-This project is linted using [`eslint`](https://eslint.org/) with the [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint) plugin.
+This project is linted using [`ESLint`](https://eslint.org/) with the [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint) plugin.
 
 Linting rules can be adjusted in the `.eslintrc.yaml` file.
 
-## Resources
+## Additional Resources
 
 * [Game Docs](https://docs.screeps.com/)
 * [API Docs](https://docs.screeps.com/api/)
+* [screeps/tutorial-scripts](https://github.com/screeps/tutorial-scripts)
+* [screeps/screeps](https://github.com/screeps/screeps)

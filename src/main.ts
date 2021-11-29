@@ -1,14 +1,8 @@
-import { run as harvesterRun } from "./job.harvester";
-
 export const loop = () => {
     logGameTick();
     cleanCreepMemory();
     
-    Game.spawns["Spawn1"].spawnCreep([WORK, WORK, CARRY, MOVE], "Harvester1");
-    const newCreep = Game.creeps["Harvester1"];
-    harvesterRun(newCreep);
-
-
+    // Creep AI to be added here.
 
 };
 
